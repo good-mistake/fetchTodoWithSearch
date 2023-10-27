@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="searchContainer">
+        <input type="text" class="searchInput" placeholder="Search" />
+        <div class="searchResults"></div>
+      </div>
+
+      <div class="todoContainer">
+        <input type="text" id="todoInput" placeholder="Enter an Item" />
+        <button class="enterBtn">Enter</button>
+
+        <ol class="todoItems">
+          <!-- <li class="todoList">
+            ss
+            <input type="checkbox" />
+            <button class="removeBtn">Remove</button>
+          </li> -->
+        </ol>
+
+        <button class="enterAllBtn">Select All</button
+        ><button class="finishBtn">Finished Selected</button
+        ><button class="removeAllBtn">Remove Selected</button>
+      </div>
+    </div>
+    <div class="finishedItems"></div>
+    <script src="/index.js"></script>
+  </body>
+</html>
