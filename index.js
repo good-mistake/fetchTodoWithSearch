@@ -31,19 +31,20 @@ searchInput.addEventListener("input", (e) => {
   const search = e.target.value.toLowerCase();
 
   searchResults.innerHTML = "";
-
-  for (result of list.listOne) {
-    if (result.includes(search)) {
-      const gg = document.createElement("div");
-      gg.textContent = result;
-      searchResults.appendChild(gg);
+  if (search > "") {
+    for (result of list.listOne) {
+      if (result.includes(search)) {
+        const searchContent = document.createElement("div");
+        searchContent.textContent = result;
+        searchResults.appendChild(searchContent);
+      }
     }
-  }
-  for (result of list.listTwo) {
-    if (result.includes(search)) {
-      const gg = document.createElement("div");
-      gg.textContent = result;
-      searchResults.appendChild(gg);
+    for (result of list.listTwo) {
+      if (result.includes(search)) {
+        const searchContent = document.createElement("div");
+        searchContent.textContent = result;
+        searchResults.appendChild(searchContent);
+      }
     }
   }
 });
