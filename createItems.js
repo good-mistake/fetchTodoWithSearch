@@ -31,14 +31,17 @@ export function createList(item) {
     }
   });
   //select all the checkboxes
+  let checkboxes = [];
+  let isChecked = false;
+  checkboxes.push(listCheckbox);
   selectAllbtn.addEventListener("click", () => {
-    if (listCheckbox.checked === false) {
-      listCheckbox.checked = true;
-      console.log("ss");
-    } else {
-      listCheckbox.checked = false;
-    }
+    isChecked = !isChecked;
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = isChecked;
+    });
+    selectAllbtn.textContent = isChecked ? "Unselect all" : "Select all";
   });
+
   //finished items
   finishBtn.addEventListener("click", () => {
     if (listCheckbox.checked === true) {
