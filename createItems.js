@@ -2,7 +2,8 @@ const todoList = document.querySelector(".todoItems");
 const removeAllbtn = document.querySelector(".removeAllBtn");
 const selectAllbtn = document.querySelector(".enterAllBtn");
 const finishBtn = document.querySelector(".finishBtn");
-import { list } from "./myList.js";
+import { myList } from "./myList.js";
+
 //create the list for every item in the todos fetched and entered
 export function createList(item) {
   const list = document.createElement("li");
@@ -49,7 +50,6 @@ export function createList(item) {
       let finished = document.createElement("div");
       finishedItems.append(finished);
       finished.append(item);
-
       listCheckbox.checked = false;
       list.remove(item);
     }
@@ -57,9 +57,9 @@ export function createList(item) {
 }
 //remove item from localstorage
 function removeItem(item) {
-  const index = list.listTwo.indexOf(item);
+  const index = myList.list.listTwo.indexOf(item);
   if (index !== -1) {
-    list.listTwo.splice(index, 1);
-    localStorage.setItem("userInput", JSON.stringify(list.listTwo));
+    myList.list.listTwo.splice(index, 1);
+    localStorage.setItem("userInput", JSON.stringify(myList.list.listTwo));
   }
 }

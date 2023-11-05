@@ -1,4 +1,4 @@
-import { list } from "./myList.js";
+import { myList } from "./myList.js";
 import { createList } from "./createItems.js";
 function get() {
   fetch("https://jsonplaceholder.typicode.com/todos")
@@ -8,7 +8,7 @@ function get() {
     .then((data) => {
       data.forEach((e) => {
         createList(e.title);
-        list.listOne.push(e.title);
+        myList.list.listOne.push(e.title);
       });
     });
 }

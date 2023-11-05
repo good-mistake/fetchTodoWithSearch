@@ -1,6 +1,6 @@
 import { saveStorage } from "./localStorage.js";
 import { clearInput } from "./clearInput.js";
-import { list } from "./myList.js";
+import { myList } from "./myList.js";
 import { createList } from "./createItems.js";
 const todoInput = document.querySelector("#todoInput");
 const enterBtn = document.querySelector(".enterBtn");
@@ -12,7 +12,7 @@ export function init() {
     if (val.trim() === "") {
       todoInput.classList.add("red");
     } else {
-      list.listTwo.push(val);
+      myList.list.listTwo.push(val);
       createList(val);
       saveStorage();
 
