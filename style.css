@@ -85,3 +85,6 @@ input {
   border-bottom: 1px solid #ccc;
   letter-spacing: 0.5px;
 }
+button:hover {
+  cursor: pointer;
+}
